@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.App {
+  &__card {
+    background-color: white;
+    width: 280px;
+    @include breakpoints(sm) {
+      width: 500px;
+    }
+    @include breakpoints(xxl) {
+      width: 900px;
+    }
+    &__data {
+      &__information {
+        &__sentence {
+          display: flex;
+          text-align: center;
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3%;
+            @include breakpoints(xxl) {
+              font-size: 30px;
+            }
+            span {
+              font-size: 3rem;
+              margin-right: 1rem;
+            }
+          }
+        }
+        &__name {
+          text-align: end;
+          margin: 3% 3% 3% 0;
+          @include breakpoints(xxl) {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    &__button {
+      padding: 0 0 3% 75%;
+      @include breakpoints(lg) {
+        padding: 0 0 3% 80%;
+      }
+      button {
+        height: 50px;
+        width: 50px;
+        color: white;
+        font-size: 40px;
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
