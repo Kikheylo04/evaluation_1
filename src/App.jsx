@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import "./sass/index.scss"
+import "./sass/index.scss";
 import { QuotexBox } from "./components/QuotexBox";
 import { FaAngleRight } from "react-icons/fa";
 import quotes from "./data/quotes.json";
@@ -15,9 +14,9 @@ function App() {
     setNumber(newRandom);
   };
   return (
-      <div className="App">
-        <div className="App__card">
-          <div className="App__card__data">
+    <div className="App">
+      <div className="App__card">
+        <div className="App__card__data">
           <QuotexBox information={quotes[number]} />
         </div>
         <div className="App__card__button">
@@ -25,9 +24,8 @@ function App() {
             <FaAngleRight />
           </button>
         </div>
-        </div>
-        
       </div>
+    </div>
   );
 }
 
